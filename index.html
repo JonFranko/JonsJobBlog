@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jon’s Job Blog — Coming Soon</title>
-  <meta name="description" content="Jon’s Job Blog — work stories, process notes, reflections. Coming soon." />
+  <title>Jon’s Job Blog — First Post</title>
+  <meta name="description" content="Jon’s Job Blog — work stories, process notes, reflections. Read the first post about kicking off the blog." />
   <style>
     :root { --bg1:#f2f2f2; --bg2:#e6eef7; --ink:#222; --accent:#1a5fb4; --accent-dark:#0e3c74; --panel:#ffffff; --shadow:rgba(0,0,0,0.15); }
     html, body { height: 100%; }
@@ -24,44 +24,62 @@
     .btn { display: inline-block; padding: 8px 14px; border-radius: 6px; border: 1px solid #8db2de; background: linear-gradient(180deg, #ffffff, #d9e9ff); box-shadow: 0 2px 0 #bcd2f0, inset 0 1px 0 #fff; text-decoration: none; color: var(--accent-dark); font-weight: 600; font-size: 13px; }
     .btn:hover { filter: brightness(1.05); }
     .panel { margin-top: 18px; background: var(--panel); border: 1px solid #d9d9d9; border-radius: 10px; box-shadow: 0 8px 20px var(--shadow); overflow: hidden; }
-    .marquee { background: repeating-linear-gradient(45deg, #ffe08a, #ffe08a 10px, #ffd064 10px, #ffd064 20px); padding: 8px 12px; border-bottom: 1px solid #e0b34f; color: #5b3d00; font-weight: 700; text-shadow: 0 1px 0 rgba(255,255,255,0.7); font-size: 13px; white-space: nowrap; }
+    .marquee { background: repeating-linear-gradient(45deg, #a8e6cf, #a8e6cf 10px, #81c8b8 10px, #81c8b8 20px); padding: 8px 12px; border-bottom: 1px solid #5f9d86; color: #114b3b; font-weight: 700; text-shadow: 0 1px 0 rgba(255,255,255,0.7); font-size: 13px; white-space: nowrap; }
     .content { padding: 26px 22px; }
-    .content h2 { margin: 0 0 10px; font-size: 22px; }
-    .content p { margin: 10px 0; line-height: 1.55; }
-    .badge { display: inline-block; margin: 10px 0 0; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; color: #fff; background: linear-gradient(180deg, #ff6a00, #de4b00); border: 1px solid #b33b00; border-radius: 14px; padding: 6px 10px; box-shadow: 0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform: uppercase; }
+    .content h2 { margin: 0 0 10px; font-size: 26px; }
+    .content p { margin: 10px 0; line-height: 1.7; }
+    .meta { font-size: 13px; color: #5a5a5a; margin-bottom: 18px; }
+    .badge { display: inline-block; margin: 16px 0 0; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; color: #fff; background: linear-gradient(180deg, #1a5fb4, #0e3c74); border: 1px solid #0e3c74; border-radius: 14px; padding: 6px 10px; box-shadow: 0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform: uppercase; }
     .counter { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 12px; color: #555; }
     .lcd { display: inline-block; padding: 2px 6px; background: #111; color: #0aff3c; font-family: "Lucida Console", Monaco, monospace; border-radius: 3px; box-shadow: inset 0 0 8px rgba(0,0,0,0.6); letter-spacing: 1px; }
-    @keyframes blink { 50% { opacity: 0.35; } }
-    .blink { animation: blink 1.2s step-end infinite; }
+    .post-footer { margin-top: 32px; border-top: 1px solid #e4e4e4; padding-top: 18px; font-size: 14px; color: #555; }
+    .post-footer strong { color: var(--accent-dark); }
     @media (max-width: 520px) { .wrap { margin-top: 22px; } .header h1 { font-size: 26px; } .content { padding: 20px 16px; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap" id="top">
     <header class="header" role="banner">
       <h1>Jon’s Job Blog</h1>
       <div class="tag">Work stories • Process notes • Reflections</div>
       <nav class="nav" aria-label="Primary">
-        <a class="btn" href="#">Home</a>
-        <a class="btn" href="#">Archive</a>
-        <a class="btn" href="#">About</a>
+        <a class="btn" href="#top">Home</a>
+        <a class="btn" href="#archive">Archive</a>
+        <a class="btn" href="#about">About</a>
         <a class="btn" href="mailto:support@doubletreeindustries.com">Contact</a>
       </nav>
     </header>
 
     <section class="panel" aria-labelledby="status">
       <div class="marquee" id="status">
-        <marquee behavior="scroll" direction="left" scrollamount="4">🚧 Under Construction — This section isn’t ready yet, but it will be soon. Thanks for stopping by! 🚧</marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="4">🎉 Fresh off the press: Jon’s first job blog entry is live! Thanks for being here. 🎉</marquee>
       </div>
-      <div class="content">
-        <h2>This isn’t ready yet — but it will be soon.</h2>
-        <p>Work stories → process notes → reflections. <span class="blink">More to come.</span></p>
-        <span class="badge" aria-label="Under Construction">Under&nbsp;Construction</span>
+      <article class="content" aria-labelledby="first-post">
+        <header>
+          <h2 id="first-post">First Post: Setting Up the Shop</h2>
+          <p class="meta">Published July 2, 2024 • by Jon</p>
+        </header>
+        <p>Welcome to Jon’s Job Blog! I’ve been talking about launching a place to share the behind-the-scenes of my work for ages, and today it finally exists. This space will be a running log of the projects I’m building, what I’m learning, and the experiments that keep my curiosity humming.</p>
+        <p>I’ll be covering everything from product strategy notes to process breakdowns, plus the occasional retro on how a launch went. Think of it as a workbench notebook—equal parts successes, missteps, and the little tweaks that make things better each week.</p>
+        <p>For this first entry I focused on getting the basics right: a home for the posts, a navigation bar ready for future sections, and a visitor counter courtesy of the Double Tree Industries toolbox. It’s all intentionally lightweight so I can write fast and refine as I go.</p>
+        <p>Next up: a deeper dive into the tools I rely on and the workflow that keeps side projects moving even when the client calendar is full. If you’d like to follow along, bookmark the page and check back soon—I’m planning to ship on a regular cadence.</p>
+        <div class="post-footer">
+          <strong>What’s coming next?</strong> An archive page, an “About” section, and plenty more posts as I settle in. If there’s something you’re curious about, drop me a line via the contact link above.
+        </div>
+        <span class="badge" aria-label="New Post">New Post</span>
 
         <div class="counter" aria-label="Visitor counter (for fun)">
           <span>Visitor count:</span> <span class="lcd" id="counter">000001</span>
         </div>
-      </div>
+      </article>
+    </section>
+
+    <section id="archive" aria-label="Archive teaser" style="margin-top:32px; font-size:14px; color:#4b4b4b;">
+      <strong>Archive coming soon:</strong> I’m organizing past project notes and will publish them here shortly.
+    </section>
+
+    <section id="about" aria-label="About teaser" style="margin-top:24px; font-size:14px; color:#4b4b4b;">
+      <strong>About Jon:</strong> Builder at Double Tree Industries. I help teams ship customer-friendly tools and share the behind-the-scenes here.
     </section>
 
     <footer class="footer" role="contentinfo">
@@ -98,4 +116,3 @@
   </script>
 </body>
 </html>
- 
