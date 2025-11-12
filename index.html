@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jon’s Job Blog — Work stories, process notes, reflections</title>
-  <meta name="description" content="Jon’s Job Blog — work stories, process notes, reflections from the field." />
+  <title>Jon’s Job Blog — The Real Cost of Culture Fit</title>
+  <meta name="description" content="Jon’s Job Blog — work stories, process notes, reflections. First post: The Real Cost of Culture Fit." />
   <style>
     :root { --bg1:#f2f2f2; --bg2:#e6eef7; --ink:#222; --accent:#1a5fb4; --accent-dark:#0e3c74; --panel:#ffffff; --shadow:rgba(0,0,0,0.15); }
     html, body { height: 100%; }
@@ -24,20 +24,24 @@
     .btn { display: inline-block; padding: 8px 14px; border-radius: 6px; border: 1px solid #8db2de; background: linear-gradient(180deg, #ffffff, #d9e9ff); box-shadow: 0 2px 0 #bcd2f0, inset 0 1px 0 #fff; text-decoration: none; color: var(--accent-dark); font-weight: 600; font-size: 13px; }
     .btn:hover { filter: brightness(1.05); }
     .panel { margin-top: 18px; background: var(--panel); border: 1px solid #d9d9d9; border-radius: 10px; box-shadow: 0 8px 20px var(--shadow); overflow: hidden; }
+    .marquee { background: repeating-linear-gradient(45deg, #ffe08a, #ffe08a 10px, #ffd064 10px, #ffd064 20px); padding: 8px 12px; border-bottom: 1px solid #e0b34f; color: #5b3d00; font-weight: 700; text-shadow: 0 1px 0 rgba(255,255,255,0.7); font-size: 13px; white-space: nowrap; }
     .content { padding: 26px 22px; }
-    .content h2 { margin: 0 0 10px; font-size: 22px; }
-    .content p { margin: 10px 0; line-height: 1.55; }
-    .meta { font-size: 12px; color: #666; margin: 6px 0 14px; }
-    .divider { height: 1px; background: #ececec; margin: 18px 0; }
-    .badge { display: inline-block; margin: 8px 0 0; font-size: 11px; font-weight: 800; letter-spacing: .4px; color: #fff; background: linear-gradient(180deg, #ff6a00, #de4b00); border: 1px solid #b33b00; border-radius: 14px; padding: 6px 10px; box-shadow: 0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform: uppercase; }
-    .counter { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 12px; color: #555; }
-    .lcd { display: inline-block; padding: 2px 6px; background: #111; color: #0aff3c; font-family: "Lucida Console", Monaco, monospace; border-radius: 3px; box-shadow: inset 0 0 8px rgba(0,0,0,0.6); letter-spacing: 1px; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:12px; color:#555; margin:6px 0 12px; }
+    .badge { display:inline-block; margin:0; font-size:12px; font-weight:700; letter-spacing:0.4px; color:#fff; background: linear-gradient(180deg, #ff6a00, #de4b00); border:1px solid #b33b00; border-radius:14px; padding:6px 10px; box-shadow:0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform:uppercase; }
+    .counter { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#555; }
+    .lcd { display:inline-block; padding:2px 6px; background:#111; color:#0aff3c; font-family:"Lucida Console", Monaco, monospace; border-radius:3px; box-shadow: inset 0 0 8px rgba(0,0,0,0.6); letter-spacing:1px; }
+    /* Post typography */
+    .post h2 { margin:0 0 4px; font-size:26px; color: var(--accent-dark); }
+    .prose { line-height:1.6; font-size:16px; }
+    .prose p { margin: 12px 0; }
+    .prose h3 { font-size:18px; margin: 20px 0 8px; color:#333; }
+    .prose em { background: linear-gradient(180deg, rgba(255,255,0,0.35), rgba(255,255,0,0.0)); }
+    .footer { margin-top: 18px; text-align:center; color:#4b4b4b; font-size: 12px; }
+    .small-links a { color: var(--accent-dark); text-decoration: none; }
+    .small-links a:hover { text-decoration: underline; }
+    @keyframes blink { 50% { opacity: 0.35; } }
+    .blink { animation: blink 1.2s step-end infinite; }
     @media (max-width: 520px) { .wrap { margin-top: 22px; } .header h1 { font-size: 26px; } .content { padding: 20px 16px; } }
-    /* retro link underline */
-    a { text-decoration: underline dotted; text-underline-offset: 2px; }
-    article a { font-weight: 600; }
-    .footer { color:#555; font-size: 12px; margin-top: 28px; }
-    .small-links a { color: var(--accent-dark); }
   </style>
 </head>
 <body>
@@ -46,44 +50,111 @@
       <h1>Jon’s Job Blog</h1>
       <div class="tag">Work stories • Process notes • Reflections</div>
       <nav class="nav" aria-label="Primary">
-        <a class="btn" href="#home">Home</a>
-        <a class="btn" href="#archive">Archive</a>
-        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#">Home</a>
+        <a class="btn" href="#">Archive</a>
+        <a class="btn" href="#">About</a>
         <a class="btn" href="mailto:support@doubletreeindustries.com">Contact</a>
       </nav>
     </header>
 
-    <!-- HOME -->
-    <section id="home" class="panel" aria-labelledby="latest">
-      <div class="content">
-        <h2 id="latest">Latest</h2>
-        <article aria-labelledby="post-title">
-          <h2 id="post-title">The real cost of “culture fit”</h2>
-          <div class="meta">
-            <time datetime="2025-11-12">November 12, 2025</time> • 4–6 min read
-          </div>
-          <p>
-            When values become marketing, the bill always lands on workers. In healthy teams,
-            anonymous surveys feed <em>performance improvement</em> loops. In unhealthy ones,
-            they become ammunition for managing people out. Over the last few years I’ve lived on both sides of that line.
-          </p>
-          <p>
-            Under one manager, hard conversations about burnout were met with care and concrete adjustments.
-            Under another—after a physical collapse—my “plan” was boiled down to a wellness quip. Same company, different culture in practice.
-          </p>
-          <p>
-            This blog is where I’ll map the gap between stated values and lived experience—without naming individuals,
-            focusing instead on systems, incentives, and practical fixes leaders can deploy <em>tomorrow</em>. If you’ve seen
-            similar gaps, I’d love to hear from you.
-          </p>
-          <p class="badge" aria-label="Series">Series: Culture & Practice</p>
-
-          <div class="counter" aria-label="Visitor counter (for fun)">
-            <span>Visitor count:</span> <span class="lcd" id="counter">000001</span>
-          </div>
-        </article>
+    <!-- Announcement bar -->
+    <section class="panel" aria-labelledby="status">
+      <div class="marquee" id="status">
+        <marquee behavior="scroll" direction="left" scrollamount="4">🆕 New post: “The Real Cost of Culture Fit” — Published Nov 12, 2025 · Thanks for reading & sharing.</marquee>
       </div>
+
+      <!-- Post -->
+      <article class="content post" aria-labelledby="post-title">
+        <header>
+          <h2 id="post-title">The Real Cost of Culture Fit</h2>
+          <div class="meta">
+            <span class="badge" aria-label="Post Tag">Essay</span>
+            <time datetime="2025-11-12">Nov 12, 2025</time>
+            <span aria-hidden="true">·</span>
+            <div class="counter" aria-label="Visitor counter (for fun)">
+              <span>Reads:</span> <span class="lcd" id="counter">000001</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="prose">
+          <p>For most of my career, I thought “culture fit” meant finding a place where you belonged. A place where people respected honesty, cared about your well-being, and believed that doing good work mattered more than politics.</p>
+          <p>For a while, that’s exactly what I had. But as I learned, <em>culture fit can change overnight.</em> And when it does, the cost isn’t just professional — it’s personal.</p>
+
+          <h3>When Care Was Still a Core Value</h3>
+          <p>Under my first few managers, conversations about how I was feeling weren’t just tolerated — they were met with genuine care. If I was burned out or struggling, we talked about it openly. There was empathy, not judgment. When I mentioned that I was overwhelmed, my manager didn’t tell me to toughen up; they looked for what could be rebalanced or improved.</p>
+          <p>That kind of leadership built trust. It’s what made long hours and hard problems feel worth it. You could speak honestly because you knew honesty wouldn’t be used against you.</p>
+
+          <h3>When That Care Disappeared</h3>
+          <p>The tone changed after leadership shifted. Around the same time, I hit a breaking point — a complete physical collapse from burnout. I wasn’t sleeping well, I wasn’t eating right, and I was pushing myself to keep up with expectations that kept shifting.</p>
+          <p>When I finally opened up about it, hoping for support or at least understanding, my new manager’s advice was to “eat more vegetables.”</p>
+          <p>That was it. No follow-up, no real concern, no adjustment in workload. Just a platitude. That moment told me everything I needed to know about where the culture was headed.</p>
+          <p>You can tell a lot about an organization by how it treats people who are struggling. Under the old leadership, burnout was seen as a symptom of imbalance — something the team could fix together. Under the new one, it was seen as a personal failing. A performance issue to be managed, not a signal to be addressed.</p>
+
+          <h3>When Feedback Became a Weapon</h3>
+          <p>The shift wasn’t just emotional — it was structural. We used to treat “anonymous” surveys as a roadmap for growth. If our scores came in low in certain categories, we built team-level improvement plans. We discussed what wasn’t working, set goals, and checked progress. It wasn’t performative; it was process improvement in its purest form.</p>
+          <p>But in my final two years, that disappeared. The surveys still happened, but the trust was gone. No follow-up sessions, no shared results, no transparency about what would happen next. The questions themselves even changed — they started to sound more like a risk assessment than a check-in.</p>
+          <p>And when you realize those “anonymous” surveys are sometimes used in hiring and firing decisions, the entire foundation crumbles. You can’t ask people to be honest in a system that uses honesty as evidence.</p>
+          <p>That’s what culture erosion looks like in real time: when tools meant to help people become tools to remove them.</p>
+
+          <h3>Innovation Without Permission</h3>
+          <p>Ironically, during that same stretch I was doing some of my best work. I was automating manual processes, using AI to speed up reporting scripts, and solving problems that had been roadblocks for months.</p>
+          <p>I remember one instance clearly — a data integration issue that a lead developer had been stuck on. I re-engineered the script in a day, and it ran faster and cleaner than before.</p>
+          <p>In a healthy culture, that would’ve sparked a conversation: <em>How did you do that? Can we build on it?</em> Instead, I was met with silence. A week later, I was out.</p>
+          <p>At the time, I thought the message was, “Don’t rock the boat.” Now I think it was, “Don’t outshine the system.”</p>
+
+          <h3>When Metrics Replace Meaning</h3>
+          <p>As the organization became more process-driven, the human side started to vanish. Performance evaluations turned into scorecards, and “interaction skills” suddenly became a weighted metric — one that doesn’t even exist in the IIBA’s Business Analysis Body of Knowledge.</p>
+          <p>I scored low there, even though my communication skills — the ability to articulate problems, document systems, and connect business needs to technical teams — were consistently rated among my strengths.</p>
+          <p>It was a small but telling example of how neurodivergent employees often get penalized in corporate settings. If you think deeply, communicate directly, or process differently, you’re often seen as lacking “soft skills” — even when those very differences drive innovation.</p>
+          <p>Culture fit becomes shorthand for “behaves like everyone else.” And if you don’t, you’re quietly marked as a risk.</p>
+
+          <h3>When Culture Becomes Process</h3>
+          <p>The longer I stayed, the more it felt like the organization was becoming about <em>process</em> over <em>people</em>. Meetings were more about maintaining optics than solving problems. Surveys became PR exercises. Innovation required approval.</p>
+          <p>The “ownership culture” I once believed in started to feel like a brand slogan rather than a shared value.</p>
+          <p>And that’s the moment you have to start asking yourself a hard question:</p>
+          <p><em>If staying true to your values makes you the wrong “fit,” maybe the problem isn’t you. Maybe it’s the definition of fit.</em></p>
+
+          <h3>The Real Cost</h3>
+          <p>The real cost of culture fit isn’t just the people who leave — it’s the silence left behind. It’s the creativity that goes untapped because people stop taking risks. It’s the honesty that disappears from meetings because nobody wants to be next. It’s the trust that erodes when empathy turns into efficiency.</p>
+          <p>I still believe in belonging, but not the kind that demands compliance. Belonging should mean you can bring your full self — ideas, flaws, and all — without fear of being managed out for it.</p>
+          <p>When an organization starts prioritizing process over people, it doesn’t just lose talent. <strong>It loses its soul.</strong></p>
+        </section>
+      </article>
     </section>
 
-    <!-- ARCHIVE -->
-    <section id="archive" class="panel" aria-labelledby="archi
+    <footer class="footer" role="contentinfo">
+      <div class="small-links">
+        <span>© <span id="year"></span> Double Tree Industries, LLC</span>
+        · <a href="https://doubletreeindustries.com" target="_blank" rel="noopener">doubletreeindustries.com</a>
+        · <a href="mailto:support@doubletreeindustries.com">support@doubletreeindustries.com</a>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Under_construction_graphic.gif?20090304223820" alt="Under Construction" />
+        <div style="margin-top:8px; font-size:12px; color:#666;">Archive & About pages are still under construction <span class="blink">…</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // year footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reads counter via your Cloudflare Worker /visit endpoint.
+    (async () => {
+      const el = document.getElementById('counter');
+      try {
+        const res = await fetch('/visit', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const txt = await res.text();
+        const num = parseInt(txt, 10);
+        if (!Number.isFinite(num)) throw new Error('Invalid count returned');
+        el.textContent = String(num).padStart(6, '0');
+      } catch (err) {
+        el.textContent = 'ERROR!';
+        console.error('Visitor counter failed:', err);
+      }
+    })();
+  </script>
+</body>
+</html>
