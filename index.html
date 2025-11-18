@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jon’s Job Blog — The Real Cost of Culture Fit</title>
-  <meta name="description" content="Jon’s Job Blog — work stories, process notes, reflections. First post: The Real Cost of Culture Fit." />
+  <title>Jon's Job Blog — The Real Cost of Culture Fit</title>
+  <meta name="description" content="Jon's Job Blog — work stories, process notes, reflections. First post: The Real Cost of Culture Fit." />
   <style>
     :root { --bg1:#f2f2f2; --bg2:#e6eef7; --ink:#222; --accent:#1a5fb4; --accent-dark:#0e3c74; --panel:#ffffff; --shadow:rgba(0,0,0,0.15); }
     html, body { height: 100%; }
@@ -23,6 +23,7 @@
     .nav { margin: 14px auto 0; display: inline-flex; gap: 8px; }
     .btn { display: inline-block; padding: 8px 14px; border-radius: 6px; border: 1px solid #8db2de; background: linear-gradient(180deg, #ffffff, #d9e9ff); box-shadow: 0 2px 0 #bcd2f0, inset 0 1px 0 #fff; text-decoration: none; color: var(--accent-dark); font-weight: 600; font-size: 13px; }
     .btn:hover { filter: brightness(1.05); }
+    .btn.active { background: linear-gradient(180deg, #d9e9ff, #bcd2f0); }
     .panel { margin-top: 18px; background: var(--panel); border: 1px solid #d9d9d9; border-radius: 10px; box-shadow: 0 8px 20px var(--shadow); overflow: hidden; }
     .marquee { background: repeating-linear-gradient(45deg, #ffe08a, #ffe08a 10px, #ffd064 10px, #ffd064 20px); padding: 8px 12px; border-bottom: 1px solid #e0b34f; color: #5b3d00; font-weight: 700; text-shadow: 0 1px 0 rgba(255,255,255,0.7); font-size: 13px; white-space: nowrap; }
     .content { padding: 26px 22px; }
@@ -36,6 +37,11 @@
     .prose p { margin: 12px 0; }
     .prose h3 { font-size:18px; margin: 20px 0 8px; color:#333; }
     .prose em { background: linear-gradient(180deg, rgba(255,255,0,0.35), rgba(255,255,0,0.0)); }
+    .prose ul { margin: 8px 0; padding-left: 24px; }
+    .prose li { margin: 4px 0; }
+    details { border: 1px solid #ddd; border-radius: 6px; padding: 12px; background: #f9f9f9; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--accent-dark); user-select: none; }
+    details[open] summary { margin-bottom: 12px; }
     .footer { margin-top: 18px; text-align:center; color:#4b4b4b; font-size: 12px; }
     .small-links a { color: var(--accent-dark); text-decoration: none; }
     .small-links a:hover { text-decoration: underline; }
@@ -47,12 +53,12 @@
 <body>
   <div class="wrap">
     <header class="header" role="banner">
-      <h1>Jon’s Job Blog</h1>
+      <h1>Jon's Job Blog</h1>
       <div class="tag">Work stories • Process notes • Reflections</div>
       <nav class="nav" aria-label="Primary">
-        <a class="btn" href="#">Home</a>
-        <a class="btn" href="#">Archive</a>
-        <a class="btn" href="#">About</a>
+        <a class="btn active" href="index.html">Home</a>
+        <a class="btn" href="archive.html">Archive</a>
+        <a class="btn" href="about.html">About</a>
         <a class="btn" href="mailto:support@doubletreeindustries.com">Contact</a>
       </nav>
     </header>
@@ -60,7 +66,7 @@
     <!-- Announcement bar -->
     <section class="panel" aria-labelledby="status">
       <div class="marquee" id="status">
-        <marquee behavior="scroll" direction="left" scrollamount="4">🆕 New post: “The Real Cost of Culture Fit” — Published Nov 12, 2025 · Thanks for reading & sharing.</marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="4">🆕 New post: "The Real Cost of Culture Fit" — Published Nov 17, 2025 · Thanks for reading & sharing.</marquee>
       </div>
 
       <!-- Post -->
@@ -68,8 +74,8 @@
         <header>
           <h2 id="post-title">The Real Cost of Culture Fit</h2>
           <div class="meta">
-            <span class="badge" aria-label="Post Tag">Essay</span>
-            <time datetime="2025-11-12">Nov 12, 2025</time>
+            <span class="badge" aria-label="Post Tag">Part I: Corporate Reality</span>
+            <time datetime="2025-11-17">Nov 17, 2025</time>
             <span aria-hidden="true">·</span>
             <div class="counter" aria-label="Visitor counter (for fun)">
               <span>Reads:</span> <span class="lcd" id="counter">000001</span>
@@ -78,47 +84,109 @@
         </header>
 
         <section class="prose">
-          <p>For most of my career, I thought “culture fit” meant finding a place where you belonged. A place where people respected honesty, cared about your well-being, and believed that doing good work mattered more than politics.</p>
-          <p>For a while, that’s exactly what I had. But as I learned, <em>culture fit can change overnight.</em> And when it does, the cost isn’t just professional — it’s personal.</p>
+          <p><em>Part I: Corporate Reality — The System Behind the Slogans</em></p>
+          
+          <h3>Introduction: When Belonging Had Conditions I Didn't Know About</h3>
+          <p>From 2019 to 2024, I worked at PPG Industries. I believed in the mission. I believed in the culture of ownership. And for a long time, the experience matched the values.</p>
+          <p>I thought "culture fit" meant finding a place where you belonged—where people respected honesty, cared about your well-being, and believed that doing good work mattered more than politics. For a while, that's exactly what I had.</p>
+          <p>But I learned that culture fit can change overnight. And when it does, the cost isn't just professional—it's personal.</p>
+          <p>I stayed quiet for months—worried about seeming unprofessional, about burning bridges, about retaliation. What changed my mind wasn't courage. It was realizing that when you're invited to share your story as part of the official narrative, and then that opportunity disappears along with your position, silence stops feeling like protection. It starts feeling like complicity.</p>
+          <p>When companies hire for "culture fit," they claim they're seeking alignment with values. In practice, fit becomes a proxy for conformity—a filter that excludes anyone who challenges assumptions or communicates differently. And when resources get scarce, "fit" becomes convenient language that lets organizations make decisions without naming what they're really screening for.</p>
+          <p>This is the first essay in the series I promised to write: unpacking five years of living the corporate experience. This isn't about bitterness. It's about pattern recognition. And it's about understanding the real cost of culture fit—a cost measured not in turnover rates, but in silence.</p>
 
           <h3>When Care Was Still a Core Value</h3>
-          <p>Under my first few managers, conversations about how I was feeling weren’t just tolerated — they were met with genuine care. If I was burned out or struggling, we talked about it openly. There was empathy, not judgment. When I mentioned that I was overwhelmed, my manager didn’t tell me to toughen up; they looked for what could be rebalanced or improved.</p>
-          <p>That kind of leadership built trust. It’s what made long hours and hard problems feel worth it. You could speak honestly because you knew honesty wouldn’t be used against you.</p>
+          <p>Under my early managers, culture fit meant something healthier: alignment on purpose and shared commitment to outcomes. Conversations about workload and compensation were met with genuine care rather than defensiveness. When I was overwhelmed, we talked about rebalancing. When I raised salary concerns, I was encouraged to negotiate and told I'd be supported.</p>
+          <p>During a difficult period, I used the Employee Assistance Program to access therapy. The company covered my first several sessions, which allowed me to get support without financial guilt. That mattered. It helped me stay grounded at work, even when I wasn't operating at full capacity.</p>
+          <p>When engagement survey scores dropped, leadership held retrospectives and asked about systemic issues. The feedback loop felt real because it drove actual change.</p>
+          <p>My team once spent about six months without a direct manager, and we stepped up. We self-organized around a data-driven performance management framework and raised our on-time delivery rate from roughly 60% to 90% following agile and lean principles. We could do that because of a legacy culture that focused on professional development.</p>
+          <p>This version of culture fit welcomes cognitive diversity. It recognizes that teams strengthen through different perspectives, not through uniformity.</p>
+
+          <h3>When the Definition Changed</h3>
+          <p>But there's a second version of culture fit—one that reveals itself gradually. This version isn't about mission; it's about personality. Communication style. Unspoken social codes.</p>
+          <p>It operates through unwritten rules. It rewards mirroring and penalizes difference. Directness becomes "abrasive." Questions become "difficult." Honesty becomes "not being a team player."</p>
+          <p>Most dangerously, it disguises itself as the first version—using the language of values while enforcing conformity.</p>
+          <p>Over the next year after that period of self-organized success, something shifted. Return-to-office policies tightened. Standardization increased. Conversations about performance and engagement started to feel less developmental and more like quiet evaluation.</p>
+          <p>Anonymous surveys didn't feel anonymous anymore. Transparency felt selective.</p>
+          <p>The shift can happen through new leadership, budget pressure, or restructuring. Whatever the catalyst, what used to be collaborative becomes transactional. By the time you realize you're no longer in the organization you joined, you're already being measured against standards you never agreed to.</p>
 
           <h3>When That Care Disappeared</h3>
-          <p>The tone changed after leadership shifted. Around the same time, I hit a breaking point — a complete physical collapse from burnout. I wasn’t sleeping well, I wasn’t eating right, and I was pushing myself to keep up with expectations that kept shifting.</p>
-          <p>When I finally opened up about it, hoping for support or at least understanding, my new manager’s advice was to “eat more vegetables.”</p>
-          <p>That was it. No follow-up, no real concern, no adjustment in workload. Just a platitude. That moment told me everything I needed to know about where the culture was headed.</p>
-          <p>You can tell a lot about an organization by how it treats people who are struggling. Under the old leadership, burnout was seen as a symptom of imbalance — something the team could fix together. Under the new one, it was seen as a personal failing. A performance issue to be managed, not a signal to be addressed.</p>
+          <p>By early 2024, I hit a breaking point—a complete physical collapse from burnout. When I finally opened up about it, hoping for support or at least understanding, my manager's advice was to "eat more vegetables."</p>
+          <p>That was it. No follow-up, no real concern, no adjustment in workload. Just a platitude.</p>
+          <p>You can tell a lot about an organization by how it treats people who are struggling. Under the old leadership, burnout was seen as a symptom of imbalance—something the team could fix together. Under the new one, it became a personal failing to be managed, not a signal to be addressed.</p>
+          <p>This shift from collective accountability to individual pathology revealed something important: organizations will celebrate your vulnerability right up until it becomes inconvenient.</p>
 
-          <h3>When Feedback Became a Weapon</h3>
-          <p>The shift wasn’t just emotional — it was structural. We used to treat “anonymous” surveys as a roadmap for growth. If our scores came in low in certain categories, we built team-level improvement plans. We discussed what wasn’t working, set goals, and checked progress. It wasn’t performative; it was process improvement in its purest form.</p>
-          <p>But in my final two years, that disappeared. The surveys still happened, but the trust was gone. No follow-up sessions, no shared results, no transparency about what would happen next. The questions themselves even changed — they started to sound more like a risk assessment than a check-in.</p>
-          <p>And when you realize those “anonymous” surveys are sometimes used in hiring and firing decisions, the entire foundation crumbles. You can’t ask people to be honest in a system that uses honesty as evidence.</p>
-          <p>That’s what culture erosion looks like in real time: when tools meant to help people become tools to remove them.</p>
-
-          <h3>Innovation Without Permission</h3>
-          <p>Ironically, during that same stretch I was doing some of my best work. I was automating manual processes, using AI to speed up reporting scripts, and solving problems that had been roadblocks for months.</p>
-          <p>I remember one instance clearly — a data integration issue that a lead developer had been stuck on. I re-engineered the script in a day, and it ran faster and cleaner than before.</p>
-          <p>In a healthy culture, that would’ve sparked a conversation: <em>How did you do that? Can we build on it?</em> Instead, I was met with silence. A week later, I was out.</p>
-          <p>At the time, I thought the message was, “Don’t rock the boat.” Now I think it was, “Don’t outshine the system.”</p>
+          <h3>The Economics of Exclusion</h3>
+          <p>Here's what I've learned: culture fit becomes most dangerous when resources get scarce.</p>
+          <p>When budgets are flush, companies can afford to tolerate people who ask uncomfortable questions or need accommodations. But when budgets tighten, "fit" becomes the sorting mechanism.</p>
+          <p>The official reason for my termination was budget cuts. That's what the paperwork said, and technically, it was true—there were department-wide cost reduction initiatives. But when you look at the pattern of who was let go and who remained, when you notice the inconsistencies in notice periods and the timing of certain decisions, you start to see that budget cuts can be both true and incomplete as an explanation.</p>
+          <p>The phrases used to explain these decisions always sound neutral: "We're looking for someone who's a better fit." "They just didn't mesh with the team." "We need to eliminate redundancies."</p>
+          <p>But underneath those phrases, there's often an unspoken calculation about who makes the organization comfortable and who doesn't.</p>
 
           <h3>When Metrics Replace Meaning</h3>
-          <p>As the organization became more process-driven, the human side started to vanish. Performance evaluations turned into scorecards, and “interaction skills” suddenly became a weighted metric — one that doesn’t even exist in the IIBA’s Business Analysis Body of Knowledge.</p>
-          <p>I scored low there, even though my communication skills — the ability to articulate problems, document systems, and connect business needs to technical teams — were consistently rated among my strengths.</p>
-          <p>It was a small but telling example of how neurodivergent employees often get penalized in corporate settings. If you think deeply, communicate directly, or process differently, you’re often seen as lacking “soft skills” — even when those very differences drive innovation.</p>
-          <p>Culture fit becomes shorthand for “behaves like everyone else.” And if you don’t, you’re quietly marked as a risk.</p>
+          <p>As the organization became more process-driven, performance evaluations shifted from development conversations to scorecards. New criteria appeared—ones that weren't tied to the actual work.</p>
+          <p>One evaluation introduced "interaction skills" as a weighted metric. This wasn't part of the International Institute of Business Analysis's Body of Knowledge (BABOK)—the professional standard for my role. It was subjective, vague, and conveniently malleable.</p>
+          <p>Despite strong scores in communication, technical competency, and problem-solving, I was rated low in "interaction skills." The implication was clear: I didn't communicate the <em>right way</em>.</p>
+          <p>This is a pattern many neurodivergent professionals will recognize. When you think deeply, communicate directly, or process information differently, it's often reframed as lacking "soft skills"—even when those very differences drive innovation.</p>
+          <p>We'll explore this dynamic more deeply in Post #8 of this series. For now, it's enough to recognize that when organizations introduce subjective metrics that don't align with professional standards, they're often creating justification for decisions already made.</p>
 
-          <h3>When Culture Becomes Process</h3>
-          <p>The longer I stayed, the more it felt like the organization was becoming about <em>process</em> over <em>people</em>. Meetings were more about maintaining optics than solving problems. Surveys became PR exercises. Innovation required approval.</p>
-          <p>The “ownership culture” I once believed in started to feel like a brand slogan rather than a shared value.</p>
-          <p>And that’s the moment you have to start asking yourself a hard question:</p>
-          <p><em>If staying true to your values makes you the wrong “fit,” maybe the problem isn’t you. Maybe it’s the definition of fit.</em></p>
+          <h3>When Feedback Became Surveillance</h3>
+          <p>We used to treat anonymous surveys as a roadmap for growth. Low scores prompted team improvement plans. We discussed what wasn't working, set goals, and checked progress.</p>
+          <p>But over time, that disappeared. The surveys still happened, but the trust was gone. No follow-up sessions. No shared results. The questions themselves changed—they started to sound more like risk assessment than check-ins.</p>
+          <p>When you realize those "anonymous" surveys might be used in employment decisions, the entire foundation crumbles. You can't ask people to be honest in a system that uses honesty as evidence.</p>
+          <p>That's what culture erosion looks like: when tools meant to help people become tools to remove them.</p>
 
-          <h3>The Real Cost</h3>
-          <p>The real cost of culture fit isn’t just the people who leave — it’s the silence left behind. It’s the creativity that goes untapped because people stop taking risks. It’s the honesty that disappears from meetings because nobody wants to be next. It’s the trust that erodes when empathy turns into efficiency.</p>
-          <p>I still believe in belonging, but not the kind that demands compliance. Belonging should mean you can bring your full self — ideas, flaws, and all — without fear of being managed out for it.</p>
-          <p>When an organization starts prioritizing process over people, it doesn’t just lose talent. <strong>It loses its soul.</strong></p>
+          <h3>The Irony Nobody Mentions</h3>
+          <p>Five months before I was laid off, I was volunteering with coworkers at the Greater Pittsburgh Community Food Bank—helping feed people who were struggling to make ends meet.</p>
+          <p>Less than a year later, I would be on SNAP benefits myself.</p>
+          <p>The distance between those two moments—from volunteer to recipient—wasn't as far as I'd imagined. And I wasn't alone in that trajectory.</p>
+          <p>When companies eliminate positions to cut costs, the expense doesn't disappear. It transfers from corporate budgets into public assistance programs. From organizational stability into personal improvisation. From workplace support into whatever resilience people can scrape together on their own.</p>
+          <p>The people navigating this aren't who you might expect. They have degrees. They showed up fully. They did what they were told would be enough.</p>
+
+          <h3>The Research Says What Experience Knows</h3>
+          <p>This isn't just my story. The patterns are well-documented.</p>
+          <p>A 2018 Harvard Business Review article titled "The Problem with 'Cultural Fit'" found that hiring for fit often reinforces similarity bias—the tendency to favor candidates who remind us of ourselves. This bias systematically excludes women, people of color, neurodivergent individuals, and anyone else who doesn't match the dominant demographic.</p>
+          <p>Deloitte's 2023 Human Capital Trends Report noted that organizations with strong "culture fit" hiring practices reported <em>lower</em> innovation scores than those prioritizing "culture add"—the idea that new hires should contribute something the team currently lacks.</p>
+          <p>Adam Grant writes in <em>Think Again</em> about the dangers of intellectual homogeneity: when everyone thinks alike, no one thinks very hard. Echo chambers generate groupthink, not breakthrough ideas.</p>
+          <p>We keep hiring for fit because it <em>feels</em> good. It's comfortable. It reduces friction.</p>
+          <p>But friction, it turns out, is where progress happens.</p>
+
+          <h3>What Gets Lost: The Silence Tax</h3>
+          <p>The real cost of culture fit isn't just the people who leave—it's what happens to the people who stay.</p>
+          <p>When employees learn that honesty has consequences, they stop being honest. They watch colleagues disappear and perform the right version of themselves to avoid being next. They soften their language, hide their struggles, suppress feedback that might be unwelcome.</p>
+          <p>When everyone is silent, the organization mistakes that silence for health. It confuses compliance with engagement. Meanwhile, beneath the surface: unspoken concerns, suppressed innovations, problems no one dares to name.</p>
+          <p>Most companies have beautiful values statements. Integrity. Innovation. Inclusion. They win awards for workplace culture and publish glossy reports about diversity.</p>
+          <p>But values aren't what you say—they're what you do when doing the right thing is expensive. Culture reveals itself when leadership changes, when budgets get cut, when someone speaks an inconvenient truth.</p>
+
+          <h3>Reframing the Question</h3>
+          <p>A healthy culture doesn't ask, "Will this person fit in?"</p>
+          <p>It asks: "Will this person help us see our blind spots?" "What perspective are we missing that this person brings?" "How can we create conditions where different working styles thrive?"</p>
+          <p>True belonging doesn't require sameness. It requires <em>alignment on purpose</em>, not personality. It requires psychological safety—the confidence that you can speak up without punishment.</p>
+          <p>It requires reciprocity. If a company expects loyalty, that loyalty must flow both ways. If it expects honesty, it must prove that honesty won't be weaponized.</p>
+          <p>And fundamentally, it requires recognizing that "culture fit" as currently practiced often means "culture same"—and sameness doesn't innovate.</p>
+
+          <h3>Conclusion: The Price We Pay for Comfort</h3>
+          <p>When an organization prioritizes comfort over growth, it doesn't announce the decision. It just starts calling conformity "culture" and calling difference "poor fit."</p>
+          <p>The people who leave aren't always the low performers. Often, they're the ones who saw problems others didn't, who asked questions others were afraid to. And the people who stay learn which truths can be spoken and which must be swallowed.</p>
+          <p>The real cost isn't measured in exit interviews or turnover rates. It's measured in silence—all the innovations not proposed, the problems not raised, the truths kept hidden because fitting in became a condition of survival.</p>
+          <p>I still believe in belonging, but not the kind that demands compliance. Belonging should mean you can bring your full self—ideas, flaws, and all—without being managed out for it.</p>
+          <p>When organizations prioritize process over people, they don't just lose talent. <strong>They lose their soul.</strong></p>
+
+          <hr style="margin: 24px 0; border: none; border-top: 1px solid #ddd;" />
+
+          <h3>What's Coming</h3>
+          <p>This is the beginning of unpacking five years of corporate experience—the gap between the culture promised in onboarding and the one that emerges under pressure.</p>
+          <p><strong>Part I</strong> (Corporate Reality) explores systemic contradictions between what companies say they value and what they actually reward.</p>
+          <p><strong>Part II</strong> (The Human Cost) examines what these systems extract from the people within them—the invisible labor of navigating neurodivergence, the emotional toll of staying silent, and the economics of decisions made under duress.</p>
+          <p><strong>Part III</strong> (Recovery & Rebuilding) explores paths toward purpose, community, and meaningful reform—how to rebuild meaning when productivity loses its moral authority, and why transparency might be our best tool for accountability.</p>
+          <p>I don't have all the answers. But I've lived enough of these contradictions to know they're worth examining. And if this series helps even one person recognize that the problem isn't them—it's the system—then it's worth writing.</p>
+          <p><em>Next in the series: "When Corporate Values Become Marketing"—examining the gap between PR-ready principles and daily reality.</em></p>
+
+          <hr style="margin: 24px 0; border: none; border-top: 1px solid #ddd;" />
+
+          <div style="text-align: center; padding: 20px 0;">
+            <p style="font-size: 15px; margin-bottom: 12px;">Want to learn more about this series?</p>
+            <a href="about.html" class="btn" style="font-size: 14px;">📖 About This Series & Roadmap</a>
+          </div>
         </section>
       </article>
     </section>
