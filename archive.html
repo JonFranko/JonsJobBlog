@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archive — Jon's Job Blog</title>
-  <meta name="description" content="Archive of essays from Jon's Job Blog" />
+  <title>Archive & Roadmap — Jon's Job Blog</title>
+  <meta name="description" content="Complete archive and roadmap of all 22 essays from Jon's Job Blog" />
   <style>
     :root { --bg1:#f2f2f2; --bg2:#e6eef7; --ink:#222; --accent:#1a5fb4; --accent-dark:#0e3c74; --panel:#ffffff; --shadow:rgba(0,0,0,0.15); }
     html, body { height: 100%; }
@@ -26,18 +26,27 @@
     .btn.active { background: linear-gradient(180deg, #d9e9ff, #bcd2f0); }
     .panel { margin-top: 18px; background: var(--panel); border: 1px solid #d9d9d9; border-radius: 10px; box-shadow: 0 8px 20px var(--shadow); overflow: hidden; }
     .content { padding: 26px 22px; }
-    .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:12px; color:#555; margin:6px 0 12px; }
-    .badge { display:inline-block; margin:0; font-size:12px; font-weight:700; letter-spacing:0.4px; color:#fff; background: linear-gradient(180deg, #9b59d0, #7b3dad); border:1px solid #5a2d7f; border-radius:14px; padding:6px 10px; box-shadow:0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform:uppercase; }
     .prose { line-height:1.6; font-size:16px; }
     .prose p { margin: 12px 0; }
     .prose h2 { font-size:24px; margin: 20px 0 12px; color: var(--accent-dark); }
-    .prose h3 { font-size:18px; margin: 20px 0 8px; color:#333; }
+    .prose h3 { font-size:18px; margin: 16px 0 8px; color:#333; }
     .prose em { background: linear-gradient(180deg, rgba(255,255,0,0.35), rgba(255,255,0,0.0)); }
     .prose strong { color: var(--accent-dark); }
+    .badge { display:inline-block; margin:0 6px 0 0; font-size:11px; font-weight:700; letter-spacing:0.4px; color:#fff; border-radius:12px; padding:4px 8px; box-shadow:0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform:uppercase; }
+    .badge.published { background: linear-gradient(180deg, #28a745, #1e7e34); border:1px solid #155724; }
+    .badge.draft { background: linear-gradient(180deg, #ffc107, #e0a800); border:1px solid #d39e00; }
+    .badge.planned { background: linear-gradient(180deg, #6c757d, #545b62); border:1px solid #3d4349; }
+    .essay-list { list-style: none; padding: 0; margin: 16px 0; }
+    .essay-item { border-left: 3px solid #ddd; padding: 12px 0 12px 16px; margin: 8px 0; }
+    .essay-item.published { border-left-color: var(--accent); background: linear-gradient(90deg, rgba(26,95,180,0.05), transparent); }
+    .essay-title { font-weight: 600; font-size: 16px; margin: 4px 0; }
+    .essay-title a { color: var(--accent-dark); text-decoration: none; }
+    .essay-title a:hover { text-decoration: underline; }
+    .essay-desc { font-size: 14px; color: #555; margin: 4px 0; }
+    .part-section { background: #f8f9fa; padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid var(--accent); }
     .footer { margin-top: 18px; text-align:center; color:#4b4b4b; font-size: 12px; }
     .small-links a { color: var(--accent-dark); text-decoration: none; }
     .small-links a:hover { text-decoration: underline; }
-    .note { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 12px; margin: 16px 0; font-size: 14px; }
     @media (max-width: 520px) { .wrap { margin-top: 22px; } .header h1 { font-size: 26px; } .content { padding: 20px 16px; } }
   </style>
 </head>
@@ -50,90 +59,170 @@
         <a class="btn" href="index.html">Home</a>
         <a class="btn active" href="archive.html">Archive</a>
         <a class="btn" href="about.html">About</a>
-        <a class="btn" href="mailto:support@doubletreeindustries.com">Contact</a>
+        <a class="btn" href="mailto:Jon@doubletreeindustries.com">Contact</a>
       </nav>
     </header>
 
     <section class="panel">
-      <article class="content">
-        <h2 style="margin-top:0; color: var(--accent-dark);">Archive</h2>
+      <article class="content prose">
+        <h2 style="margin-top:0;">Archive & Roadmap</h2>
         
-        <div class="note">
-          <strong>📝 Note:</strong> This is an early draft version generated during the development process. The <a href="index.html">current version</a> on the home page reflects the final published essay.
+        <p>This is the complete roadmap for all 22 essays in the series. Published essays are linked and available to read. Essays in progress are listed with their planned themes.</p>
+
+        <div class="part-section">
+          <h3>Part I: Corporate Reality — The System Behind the Slogans</h3>
+          <p><em>This opening act establishes credibility as both insider and observer—someone who believed in the mission until seeing how culture can be both cultivated and commodified. These essays examine the structural contradictions between stated values and lived experience.</em></p>
+          
+          <ul class="essay-list">
+            <li class="essay-item published">
+              <span class="badge published">Published</span>
+              <div class="essay-title"><a href="essay-01.html">1. The Real Cost of Culture Fit</a></div>
+              <div class="essay-desc">How conformity masquerades as culture and undermines diversity.</div>
+            </li>
+            
+            <li class="essay-item published">
+              <span class="badge published">Published</span>
+              <div class="essay-title"><a href="index.html">2. When Corporate Values Become Marketing</a></div>
+              <div class="essay-desc">The difference between lived values and award-winning PR. The 100-Point Paradox.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge draft">Draft</span>
+              <div class="essay-title">3. The Illusion of Efficiency: When Cost-Cutting Costs More</div>
+              <div class="essay-desc">How "budget alignment" becomes moral misalignment.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">4. Ownership Culture Ends Where the Org Chart Begins</div>
+              <div class="essay-desc">Why empowerment slogans fail without reciprocal trust.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">5. The Mirage of Diversity in a Budget Crisis</div>
+              <div class="essay-desc">How DEI collapses the moment budgets tighten.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">6. Automation Without Empathy</div>
+              <div class="essay-desc">The paradox of building the tools that eventually displace you.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">7. Ethics in Retrospect: What Companies Forget When Cutting Costs</div>
+              <div class="essay-desc">Why layoffs framed as "efficiency" corrode long-term trust.</div>
+            </li>
+          </ul>
         </div>
 
-        <div style="border-bottom: 1px solid #ddd; padding-bottom: 16px; margin-bottom: 16px;">
-          <h3 style="margin: 0 0 8px; font-size: 20px;">The Real Cost of Culture Fit (ChatGPT's version)</h3>
-          <div class="meta">
-            <span class="badge">Draft</span>
-            <time datetime="2025-11-12">Nov 12, 2025</time>
-          </div>
+        <div class="part-section">
+          <h3>Part II: The Human Cost — What Work Takes When It Stops Caring</h3>
+          <p><em>Here, the camera zooms in. These pieces translate corporate abstraction into human emotion—the exhaustion of masking, the coercion of "choice," and the silence demanded by professionalism. They're not about bitterness; they're about bearing witness.</em></p>
+          
+          <ul class="essay-list">
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">8. Invisible Labor: Neurodivergence and the Unseen Effort to Belong</div>
+              <div class="essay-desc">The double workload of performing and pretending.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">9. The Emotional Labor of Staying Silent</div>
+              <div class="essay-desc">How suppression becomes a survival skill—and a slow poison.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">10. Hostile by Design: When "Feedback" Becomes Public Shaming</div>
+              <div class="essay-desc">The psychological toll of performative transparency.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">11. Severance Under Duress: The Quiet Economics of Power</div>
+              <div class="essay-desc">The legal-sounding, human-breaking side of "voluntary" agreements.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">12. Disability as a PR Asset vs. a Workplace Reality</div>
+              <div class="essay-desc">What happens when "mental health awareness" meets real need.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">13. The Bureaucracy of Disbelief</div>
+              <div class="essay-desc">How HR systems protect institutions, not the people they serve.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">14. Why 'Resilience' Became the Corporate Coping Mechanism</div>
+              <div class="essay-desc">The myth of bouncing back when the ground keeps shifting.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">15. The Outsourcing of Empathy</div>
+              <div class="essay-desc">When global efficiency erases local humanity.</div>
+            </li>
+          </ul>
         </div>
 
-        <div class="prose">
-          <p>For most of my career, I thought "culture fit" meant finding a place where you belonged. A place where people respected honesty, cared about your well-being, and believed that doing good work mattered more than politics.</p>
+        <div class="part-section">
+          <h3>Part III: Recovery & Rebuilding — Reclaiming Work, Purpose, and Voice</h3>
+          <p><em>The final act rebuilds hope without naivety. It explores what comes after disillusionment—how purpose re-emerges through community, creativity, and transparency. This section positions Jon's Job Blog as a movement toward more humane work.</em></p>
           
-          <p>For a while, that's exactly what I had. But as I learned, culture fit can change overnight. And when it does, the cost isn't just professional — it's personal.</p>
-
-          <h3>When Care Was Still a Core Value</h3>
-          <p>Under my first few managers, conversations about how I was feeling weren't just tolerated — they were met with genuine care. If I was burned out or struggling, we talked about it openly. There was empathy, not judgment. When I mentioned that I was overwhelmed, my manager didn't tell me to toughen up; they looked for what could be rebalanced or improved.</p>
-          
-          <p>That kind of leadership built trust. It's what made long hours and hard problems feel worth it. You could speak honestly because you knew honesty wouldn't be used against you.</p>
-
-          <h3>When That Care Disappeared</h3>
-          <p>The tone changed after leadership shifted. Around the same time, I hit a breaking point — a complete physical collapse from burnout. I wasn't sleeping well, I wasn't eating right, and I was pushing myself to keep up with expectations that kept shifting.</p>
-          
-          <p>When I finally opened up about it, hoping for support or at least understanding, my new manager's advice was to "eat more vegetables."</p>
-          
-          <p>That was it. No follow-up, no real concern, no adjustment in workload. Just a platitude. That moment told me everything I needed to know about where the culture was headed.</p>
-          
-          <p>You can tell a lot about an organization by how it treats people who are struggling. Under the old leadership, burnout was seen as a symptom of imbalance — something the team could fix together. Under the new one, it was seen as a personal failing. A performance issue to be managed, not a signal to be addressed.</p>
-
-          <h3>When Feedback Became a Weapon</h3>
-          <p>The shift wasn't just emotional — it was structural. We used to treat "anonymous" surveys as a roadmap for growth. If our scores came in low in certain categories, we built team-level improvement plans. We discussed what wasn't working, set goals, and checked progress. It wasn't performative; it was process improvement in its purest form.</p>
-          
-          <p>But in my final two years, that disappeared. The surveys still happened, but the trust was gone. No follow-up sessions, no shared results, no transparency about what would happen next. The questions themselves even changed — they started to sound more like a risk assessment than a check-in.</p>
-          
-          <p>And when you realize those "anonymous" surveys are sometimes used in hiring and firing decisions, the entire foundation crumbles. You can't ask people to be honest in a system that uses honesty as evidence.</p>
-          
-          <p>That's what culture erosion looks like in real time: when tools meant to help people become tools to remove them.</p>
-
-          <h3>Innovation Without Permission</h3>
-          <p>Ironically, during that same stretch I was doing some of my best work. I was automating manual processes, using AI to speed up reporting scripts, and solving problems that had been roadblocks for months.</p>
-          
-          <p>I remember one instance clearly — a data integration issue that a lead developer had been stuck on. I re-engineered the script in a day, and it ran faster and cleaner than before.</p>
-          
-          <p>In a healthy culture, that would've sparked a conversation: <em>How did you do that? Can we build on it?</em> Instead, I was met with silence. A week later, I was out.</p>
-          
-          <p>At the time, I thought the message was, "Don't rock the boat." Now I think it was, "Don't outshine the system."</p>
-
-          <h3>When Metrics Replace Meaning</h3>
-          <p>As the organization became more process-driven, the human side started to vanish. Performance evaluations turned into scorecards, and "interaction skills" suddenly became a weighted metric — one that doesn't even exist in the IIBA's Business Analysis Body of Knowledge.</p>
-          
-          <p>I scored low there, even though my communication skills — the ability to articulate problems, document systems, and connect business needs to technical teams — were consistently rated among my strengths.</p>
-          
-          <p>It was a small but telling example of how neurodivergent employees often get penalized in corporate settings. If you think deeply, communicate directly, or process differently, you're often seen as lacking "soft skills" — even when those very differences drive innovation.</p>
-          
-          <p>Culture fit becomes shorthand for "behaves like everyone else." And if you don't, you're quietly marked as a risk.</p>
-
-          <h3>When Culture Becomes Process</h3>
-          <p>The longer I stayed, the more it felt like the organization was becoming about <em>process</em> over <em>people</em>. Meetings were more about maintaining optics than solving problems. Surveys became PR exercises. Innovation required approval.</p>
-          
-          <p>The "ownership culture" I once believed in started to feel like a brand slogan rather than a shared value.</p>
-          
-          <p>And that's the moment you have to start asking yourself a hard question:</p>
-          
-          <p><em>If staying true to your values makes you the wrong "fit," maybe the problem isn't you. Maybe it's the definition of fit.</em></p>
-
-          <h3>The Real Cost</h3>
-          <p>The real cost of culture fit isn't just the people who leave — it's the silence left behind. It's the creativity that goes untapped because people stop taking risks. It's the honesty that disappears from meetings because nobody wants to be next. It's the trust that erodes when empathy turns into efficiency.</p>
-          
-          <p>I still believe in belonging, but not the kind that demands compliance. Belonging should mean you can bring your full self — ideas, flaws, and all — without fear of being managed out for it.</p>
-          
-          <p>When an organization starts prioritizing process over people, it doesn't just lose talent. <strong>It loses its soul.</strong></p>
-
-          <p style="margin-top: 32px;"><a href="index.html" class="btn">← Back to Home</a></p>
+          <ul class="essay-list">
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">16. Purpose After Burnout</div>
+              <div class="essay-desc">Finding meaning once productivity loses its moral authority.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">17. The Metrics of Humanity</div>
+              <div class="essay-desc">Redefining success around care, not compliance.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">18. How "Professionalism" Silences the Neurodivergent</div>
+              <div class="essay-desc">Reclaiming integrity from tone-policed conformity.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">19. Community Service as a Counterweight to Corporate Apathy</div>
+              <div class="essay-desc">How volunteerism restores the social fabric profit unraveled.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">20. Transparency as Self-Defense</div>
+              <div class="essay-desc">Turning documentation into dignity and accountability.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">21. The Geography of Dignity: Global Teams, Local Consequences</div>
+              <div class="essay-desc">Building empathy across borders and bandwidths.</div>
+            </li>
+            
+            <li class="essay-item">
+              <span class="badge planned">Planned</span>
+              <div class="essay-title">22. Reclaiming the Narrative: From HR File to Human Story</div>
+              <div class="essay-desc">Why storytelling is the worker's last tool of reform.</div>
+            </li>
+          </ul>
         </div>
+
+        <p style="margin-top: 32px;"><a href="index.html" class="btn">← Back to Home</a></p>
       </article>
     </section>
 
@@ -141,7 +230,7 @@
       <div class="small-links">
         <span>© <span id="year"></span> Double Tree Industries, LLC</span>
         · <a href="https://doubletreeindustries.com" target="_blank" rel="noopener">doubletreeindustries.com</a>
-        · <a href="mailto:support@doubletreeindustries.com">support@doubletreeindustries.com</a>
+        · <a href="mailto:Jon@doubletreeindustries.com">Jon@doubletreeindustries.com</a>
       </div>
     </footer>
   </div>
