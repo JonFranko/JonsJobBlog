@@ -1,14 +1,45 @@
 # robots.txt for jonsjobblog.com
 
-User-agent: *
+# Allow legitimate search engines
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: ia_archiver
 Allow: /
+
+# Block AI training bots
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: cohere-ai
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: Bytespider
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Diffbot
+User-agent: FacebookBot
+User-agent: Omgilibot
+Disallow: /
+
+# Block generic scrapers
+User-agent: scrapy
+User-agent: selenium
+User-agent: puppeteer
+User-agent: playwright
+User-agent: webdriver
+User-agent: phantomjs
+User-agent: curl
+User-agent: wget
+Disallow: /
+
+# Honeypot paths (these will trap bots)
+# Don't visit these unless you want a very slow download
+User-agent: *
+Disallow: /crawl/
+Disallow: /sitemap-secret/
+Disallow: /wp-admin/
 
 # Sitemap location
 Sitemap: https://jonsjobblog.com/sitemap.xml
-
-# Block specific user agents if needed (uncomment to use)
-# User-agent: GPTBot
-# Disallow: /
-
-# Crawl-delay (optional, uncomment if needed)
-# Crawl-delay: 10
