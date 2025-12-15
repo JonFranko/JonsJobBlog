@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Automation Without Empathy — Jonathan Franko | PPG Industries RPA</title>
+  <meta name="title" content="Automation Without Empathy — Jonathan Franko | PPG Industries RPA" />
+  <meta name="description" content="The paradox of building RPA tools that eventually displaced the builders. Jonathan Franko examines automation ethics through his experience as PPG Industries' RPA analyst." />
+  <meta name="keywords" content="Jonathan Franko, Jon Franko, PPG Industries, RPA, robotic process automation, automation ethics, digital transformation, technology displacement, AI ethics" />
+  <meta name="author" content="Jonathan Franko" />
+  <meta name="robots" content="index, follow, noai, noimageai" />
+  <meta name="language" content="English" />
+  <meta name="geo.region" content="US-PA" />
+  <meta name="geo.placename" content="Pittsburgh, Pennsylvania" />
+  <link rel="canonical" href="https://jonsjobblog.com/essay-06.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jonsjobblog.com/essay-06.html" />
+  <meta property="og:title" content="Automation Without Empathy — Jonathan Franko" />
+  <meta property="og:description" content="The paradox of building RPA tools that eventually displaced the builders." />
+  <meta property="og:image" content="https://jonsjobblog.com/og-image.png" />
+  <meta property="og:site_name" content="Jon's Job Blog" />
+  <meta property="article:published_time" content="2025-12-15T00:00:00Z" />
+  <meta property="article:author" content="Jonathan Franko" />
+  <meta property="article:section" content="Corporate Culture" />
+  <meta property="article:tag" content="automation ethics" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://jonsjobblog.com/essay-06.html" />
+  <meta property="twitter:title" content="Automation Without Empathy — Jonathan Franko" />
+  <meta property="twitter:description" content="The paradox of building RPA tools that eventually displaced the builders." />
+  <meta property="twitter:image" content="https://jonsjobblog.com/twitter-card.png" />
+  <meta property="twitter:creator" content="@JonFranko" />
+  
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Automation Without Empathy",
+    "description": "The paradox of building RPA tools that eventually displaced the builders. An examination of automation ethics through personal experience.",
+    "image": "https://jonsjobblog.com/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Jonathan Franko",
+      "url": "https://doubletreeindustries.com",
+      "jobTitle": "Business Analyst & Consultant"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Double Tree Industries, LLC",
+      "url": "https://doubletreeindustries.com"
+    },
+    "datePublished": "2025-12-15",
+    "dateModified": "2025-12-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jonsjobblog.com/essay-06.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Jon's Job Blog: Corporate Culture Essays",
+      "description": "A 22-part essay series examining modern corporate culture"
+    },
+    "articleSection": "Corporate Culture",
+    "keywords": "automation ethics, RPA, robotic process automation, PPG Industries, Jonathan Franko, technology displacement",
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "PPG Industries",
+        "sameAs": "https://www.ppg.com"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jonsjobblog.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Archive",
+      "item": "https://jonsjobblog.com/archive.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Essay 6: Automation Without Empathy",
+      "item": "https://jonsjobblog.com/essay-06.html"
+    }]
+  }
+  </script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  
+  <style>
+    :root { --bg1:#f2f2f2; --bg2:#e6eef7; --ink:#222; --accent:#1a5fb4; --accent-dark:#0e3c74; --panel:#ffffff; --shadow:rgba(0,0,0,0.15); }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: "Trebuchet MS", Verdana, Tahoma, Arial, sans-serif; color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px) 0 0 / 12px 12px,
+        linear-gradient(0deg, rgba(255,255,255,0.35) 1px, transparent 1px) 0 0 / 12px 12px,
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+    .wrap { max-width: 820px; margin: 40px auto 80px; padding: 0 16px; }
+    .header { border-radius: 10px; background: linear-gradient(180deg, #ffffff, #e9f1fb); box-shadow: 0 10px 24px var(--shadow), inset 0 1px 0 #fff; padding: 26px 24px 18px; border: 1px solid #d6e3f7; text-align: center; }
+    .header h1 { margin: 0 0 6px; font-size: 34px; color: var(--accent-dark); text-shadow: 0 1px 0 #fff; }
+    .header .tag { font-size: 14px; color: #4b4b4b; }
+    .nav { margin: 14px auto 0; display: inline-flex; gap: 8px; }
+    .btn { display: inline-block; padding: 8px 14px; border-radius: 6px; border: 1px solid #8db2de; background: linear-gradient(180deg, #ffffff, #d9e9ff); box-shadow: 0 2px 0 #bcd2f0, inset 0 1px 0 #fff; text-decoration: none; color: var(--accent-dark); font-weight: 600; font-size: 13px; }
+    .btn:hover { filter: brightness(1.05); }
+    .panel { margin-top: 18px; background: var(--panel); border: 1px solid #d9d9d9; border-radius: 10px; box-shadow: 0 8px 20px var(--shadow); overflow: hidden; }
+    .content { padding: 26px 22px; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:12px; color:#555; margin:6px 0 12px; }
+    .badge { display:inline-block; margin:0; font-size:12px; font-weight:700; letter-spacing:0.4px; color:#fff; background: linear-gradient(180deg, #ff6a00, #de4b00); border:1px solid #b33b00; border-radius:14px; padding:6px 10px; box-shadow:0 2px 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.45); text-transform:uppercase; }
+    .post h2 { margin:0 0 4px; font-size:26px; color: var(--accent-dark); }
+    .prose { line-height:1.6; font-size:16px; }
+    .prose p { margin: 12px 0; }
+    .prose h3 { font-size:18px; margin: 20px 0 8px; color:#333; }
+    .prose em { background: linear-gradient(180deg, rgba(255,255,0,0.35), rgba(255,255,0,0.0)); }
+    .prose strong { color: var(--accent-dark); }
+    .prose ul { margin: 8px 0; padding-left: 24px; }
+    .prose li { margin: 4px 0; }
+    .prose hr { margin: 24px 0; border: none; border-top: 1px solid #ddd; }
+    .footer { margin-top: 18px; text-align:center; color:#4b4b4b; font-size: 12px; }
+    .small-links a { color: var(--accent-dark); text-decoration: none; }
+    .small-links a:hover { text-decoration: underline; }
+    @media (max-width: 520px) { .wrap { margin-top: 22px; } .header h1 { font-size: 26px; } .content { padding: 20px 16px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header" role="banner">
+      <h1>Jon's Job Blog</h1>
+      <div class="tag">Work stories • Process notes • Reflections</div>
+      <nav class="nav" aria-label="Primary">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="archive.html">Archive</a>
+        <a class="btn" href="about.html">About</a>
+        <a class="btn" href="mailto:Jon@doubletreeindustries.com">Contact</a>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <article class="content post">
+        <header>
+          <h2>Automation Without Empathy</h2>
+          <div class="meta">
+            <span class="badge">Part I: Corporate Reality</span>
+            <time datetime="2025-12-15">Dec 15, 2025</time>
+            · By <a href="https://jonsjobspace.jonsjobblog.com" style="color: var(--accent-dark); text-decoration: none; font-weight: 600;">Jonathan Franko</a>
+          </div>
+        </header>
+
+        <section class="prose">
+          <p>There's a peculiar irony in being displaced by the very systems you helped build.</p>
+
+          <p>For four and a half years, my job was to make other jobs unnecessary. I was a part of a team that built robotic process automation tools—digital systems that could perform repetitive business tasks faster, more accurately, and more cheaply than human workers. Data entry, status updates, routine communications—all automated, all optimized, all "improved."</p>
+
+          <p>I was good at it. The work was technically interesting, the impact was measurable, and the value proposition was clear. Automation saved the company money. It freed people from tedious work. It reduced errors. Everyone benefited.</p>
+
+          <p>That was the story, anyway.</p>
+
+          <p>The truth was more complicated. Yes, automation reduced headcount in certain areas. But the people whose jobs were eliminated rarely "moved up" to more strategic work, as the consulting presentations always promised. They were let go, or reassigned to other repetitive tasks, or quietly pressured to find positions elsewhere. The efficiency gains were real. The human cost was also real. And those of us building the tools weren't supposed to think too hard about the second part.</p>
+
+          <p>Until April 30, 2024, when I learned that automation doesn't stop at factory floors or back-office operations. Eventually, it comes for its builders.</p>
+
+          <h3>The Builders Become the Built-Out</h3>
+
+          <p>The RPA Center of Excellence was successful by every metric that mattered to senior leadership. We had automated dozens of processes, saved thousands of hours, and reduced operational costs by millions of dollars. Our bots ran reliably, our error rates were low (down 80%+ during my last few months of employment thanks to my own work as an individual contributor), and our stakeholders were satisfied.</p>
+
+          <p>And that, paradoxically, became the problem.</p>
+
+          <p>When automation is working well, it becomes invisible. The processes run smoothly, the exceptions are rare, and the maintenance demands decrease. To executives reviewing budget spreadsheets, a well-functioning automation program doesn't look like ongoing value creation—it looks like steady-state operations that could be handled with fewer people.</p>
+
+          <p>I'd been leading digital transformation initiatives while simultaneously being identified as a target of that transformation. The irony wasn't lost on me, but I didn't fully appreciate it until I received the notice from HR. My position was being eliminated as part of "budget cuts." The role would be absorbed by the team, and eventually a new hire in Poland, where my manager was based.</p>
+
+          <p>The mythology around automation always promised that workers would be "freed" for higher-value work. The robots would handle the tedious tasks, and humans would focus on strategy, creativity, and relationship-building. It's a compelling narrative, and in carefully curated case studies, it sometimes even happens.</p>
+
+          <p>But in practice, companies rarely invest in retraining displaced workers or creating new roles for them. The logic is simple: if the goal is cost reduction, why would you redeploy someone to a new role when you could simply eliminate the position and capture the full savings?</p>
+
+          <p>The automation practitioners—the people who understood both the technical systems and the organizational context—were especially vulnerable. We'd made ourselves so efficient that our ongoing contributions became harder to measure. We'd documented our processes so thoroughly that our institutional knowledge seemed transferable. We'd built systems so robust that they appeared not to need us.</p>
+
+          <h3>The Human Remainder</h3>
+
+          <p>There's a particular kind of knowledge that doesn't translate well to documentation. It lives in the space between formal processes and actual practice—the understanding of why certain workflows exist, which stakeholders have competing priorities, what the real constraints are behind the official policies.</p>
+
+          <p>When I built an automation, I wasn't just translating a process into code. I was interpreting organizational dynamics, negotiating competing requirements, and building relationships with the people whose work would be affected. I understood which exceptions were genuine edge cases and which were symptoms of deeper process problems. I knew who to call when something broke, and more importantly, I knew how to ask for help in ways that would actually get results.</p>
+
+          <p>This tacit knowledge—the relationships, the context, the organizational memory—is what gets lost when you offshore a role or eliminate it entirely. MIT Technology Review has documented this phenomenon across industries: automation projects often succeed in the short term but falter over time as the institutional knowledge that made them work in the first place gradually disappears.</p>
+
+          <p>When relationships become tickets and conversations become workflows, something essential is lost. The efficiency gains are measurable. The losses are not—at least not immediately.</p>
+
+          <p>A new team member in a different country, working different hours, reporting to a different manager, can certainly maintain the automation systems I built. They can update the code, troubleshoot errors, and respond to service tickets. What they can't easily replicate is the four and a half years of relationship-building, the deep understanding of organizational politics, the knowledge of which battles are worth fighting and which compromises are necessary.</p>
+
+          <p>That knowledge doesn't show up in a transition document. It can't be captured in a knowledge base article. And by the time its absence becomes apparent, the person who held it is long gone.</p>
+
+          <h3>What We're Really Automating</h3>
+
+          <p>Shoshana Zuboff's work on surveillance capitalism explores how digital systems are increasingly designed not to augment human capability but to extract value by replacing human judgment with algorithmic decision-making. Her argument applies directly to corporate automation: when the primary driver is cost reduction rather than human flourishing, the technology inevitably becomes extractive rather than augmentative.</p>
+
+          <p>The question "What should we automate?" is less important than "For whom are we automating?"</p>
+
+          <p>If automation serves shareholders by reducing labor costs, the technology will be deployed in ways that displace workers. If automation serves workers by removing drudgery and creating capacity for more meaningful work, the technology will be deployed differently. The code might look similar, but the outcomes diverge dramatically.</p>
+
+          <p>I spent years building automation that was presented as worker-friendly but ultimately served a cost-cutting agenda. The presentations emphasized how we were "freeing people for higher-value work," but the budgets told a different story: every automation project had a projected headcount reduction attached to it. That was the real measure of success.</p>
+
+          <p>This isn't a technological problem. Automation itself is neutral—a set of tools that can be deployed in service of many different values. The problem is that in most corporate contexts, the values driving automation decisions are shareholder returns and quarterly earnings, not worker well-being or organizational resilience.</p>
+
+          <p>When automation is approached as augmentation—as a way to extend human capability rather than replace human workers—the outcomes are strikingly different. Workers become more effective, organizations retain institutional knowledge, and the technology creates genuine value rather than simply shifting costs.</p>
+
+          <p>But augmentation requires investment. It means training workers to use new tools, redesigning processes to support human-machine collaboration, and measuring success by productivity gains rather than headcount reductions. It means asking "How can this technology make our people more effective?" instead of "How many people can we eliminate?"</p>
+
+          <p>That's a harder sell in a quarterly-earnings culture.</p>
+
+          <h3>A Forester's Perspective</h3>
+
+          <p>Before I worked in finance and technology, I studied forestry. I learned to think about systems in terms of sustainability rather than extraction—to understand that healthy forests aren't maximized for short-term timber yields but managed for long-term resilience.</p>
+
+          <p>An extractive approach to forestry clear-cuts everything of immediate value and moves on. A sustainable approach recognizes that the forest is a complex system, that short-term gains often come at the expense of long-term health, and that the goal is stewardship rather than extraction.</p>
+
+          <p>The parallels to corporate automation are exact.</p>
+
+          <p>Extractive automation treats workers as costs to be minimized. It optimizes for immediate efficiency gains without considering what organizational capacity is lost in the process. It measures success in headcount reductions and quarterly savings, not in long-term organizational health or worker well-being.</p>
+
+          <p>Sustainable automation would look different. It would treat workers as stakeholders whose knowledge and relationships are valuable assets. It would optimize for human capability rather than human displacement. It would measure success in productivity gains, quality improvements, and worker satisfaction, not just in how many positions could be eliminated.</p>
+
+          <p>The technology to build either version already exists. What's missing isn't technical capability—it's organizational will.</p>
+
+          <p>Companies claim they want innovation, agility, and institutional knowledge. But when budget pressures arrive, those priorities dissolve. The automation experts are let go, the relationships are severed, and the organizational memory is erased. The systems keep running—for a while—but the capacity to adapt, to innovate, to respond to changing conditions has been quietly extracted.</p>
+
+          <p>And when those systems eventually break, as all systems do, the people who understood them are gone.</p>
+
+          <h3>The Path Not Taken</h3>
+
+          <p>I don't regret building automation systems. The work itself was meaningful—solving complex problems, improving processes, helping stakeholders be more effective at their jobs. The technology wasn't the problem. The business model was.</p>
+
+          <p>What I learned, through my own displacement, is that no one is immune. The assembly line workers whose jobs were automated in the 1980s, the call center employees whose jobs were offshored in the 2000s, the knowledge workers whose jobs are being eliminated by AI today—we're all part of the same pattern.</p>
+
+          <p>Even the people building the systems aren't safe. Especially the people building the systems, because we make ourselves so efficient that our ongoing value becomes invisible.</p>
+
+          <p>The LinkedIn post I wrote after my termination tried to be gracious. I thanked the team, acknowledged the good work we'd done together, and even recommended the position to people in my network. I meant all of it. The people I worked with were talented and well-intentioned. The systems we built were legitimately useful.</p>
+
+          <p>But beneath the professional courtesy was a harder truth: I'd spent four and a half years building systems that ultimately made my own position expendable. I'd documented my work so thoroughly that someone else could theoretically step in without much difficulty. I'd automated processes so effectively that the ongoing maintenance appeared minimal. I'd made myself replaceable.</p>
+
+          <p>The tragedy isn't that automation eliminates jobs—it's that we've chosen to deploy it in ways that serve extraction over augmentation, shareholders over stakeholders, quarterly returns over long-term resilience.</p>
+
+          <p>We have the technology to build systems that extend human capability, preserve institutional knowledge, and create genuine value. We have the resources to invest in workers rather than replace them. We have the expertise to design automation that serves human flourishing rather than cost reduction.</p>
+
+          <p>What we lack is the collective will to ask the right question: not "What can we automate?" but "For whom, and to what end?"</p>
+
+          <p>Until we're willing to answer that honestly, automation will continue eating its builders. And the efficiency gains we celebrate today will become the institutional losses we mourn tomorrow.</p>
+
+          <hr />
+
+          <p><em>Next in the series: <a href="essay-07.html">Essay 7 - Ethics in Retrospect: What Companies Forget When Cutting Costs</a></em></p>
+
+          <p style="margin-top: 32px;">
+            <a href="essay-05.html" class="btn">← Previous Essay</a>
+            <a href="archive.html" class="btn">View Full Archive</a>
+            <a href="essay-07.html" class="btn">Next Essay →</a>
+          </p>
+        </section>
+      </article>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+      <div class="small-links">
+        <span>© <span id="year"></span> Double Tree Industries, LLC</span>
+        · <a href="https://doubletreeindustries.com" target="_blank" rel="noopener">doubletreeindustries.com</a>
+        · <a href="mailto:Jon@doubletreeindustries.com">Jon@doubletreeindustries.com</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
