@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon's Job Blog - Access Required</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .notice {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: left;
+            font-size: 13px;
+            color: #856404;
+        }
+
+        .notice strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #856404;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #1e3c72;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-family: 'Courier New', monospace;
+        }
+
+        button:hover {
+            background: #2a5298;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .error {
+            color: #dc3545;
+            margin-top: 15px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .spinner {
+            display: none;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #1e3c72;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spinner.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Jon's Job Blog</h1>
+        <p class="subtitle">Corporate Reality Through Personal Narrative</p>
+        
+        <div class="notice">
+            <strong>⚠️ Temporary Access Restriction</strong>
+            This site is temporarily password-protected while content is under legal review. If you need access, please contact the site administrator.
+        </div>
+
+        <form id="loginForm">
+            <label for="password">Enter Access Password:</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Enter password..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Access Site</button>
+            <div class="spinner" id="spinner"></div>
+            <p class="error" id="error">Incorrect password. Please try again.</p>
+        </form>
+
+        <div class="footer">
+            <p>Password-protected as of December 20, 2025</p>
+            <p>For authorized access only</p>
+        </div>
+    </div>
+
+    <script>
+        // Password configuration
+        const CORRECT_PASSWORD = 'temporary-access-2024';
+        const STORAGE_KEY = 'jjb_auth';
+        const EXPIRY_HOURS = 24; // Session expires after 24 hours
+
+        // Check if already authenticated
+        function checkAuth() {
+            const auth = localStorage.getItem(STORAGE_KEY);
+            if (auth) {
+                try {
+                    const authData = JSON.parse(auth);
+                    const now = new Date().getTime();
+                    
+                    // Check if session is still valid
+                    if (authData.expiry > now && authData.authenticated === true) {
+                        redirectToSite();
+                        return true;
+                    } else {
+                        // Session expired, clear it
+                        localStorage.removeItem(STORAGE_KEY);
+                    }
+                } catch (e) {
+                    localStorage.removeItem(STORAGE_KEY);
+                }
+            }
+            return false;
+        }
+
+        // Set authentication
+        function setAuth() {
+            const now = new Date().getTime();
+            const expiry = now + (EXPIRY_HOURS * 60 * 60 * 1000);
+            const authData = {
+                authenticated: true,
+                expiry: expiry,
+                timestamp: now
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(authData));
+        }
+
+        // Redirect to main site
+        function redirectToSite() {
+            window.location.href = 'main.html';
+        }
+
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const passwordInput = document.getElementById('password');
+            const errorMsg = document.getElementById('error');
+            const spinner = document.getElementById('spinner');
+            const submitBtn = this.querySelector('button');
+            
+            // Hide error message
+            errorMsg.classList.remove('show');
+            
+            // Show loading state
+            spinner.classList.add('show');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Checking...';
+            
+            // Simulate slight delay (makes it feel more secure)
+            setTimeout(() => {
+                if (passwordInput.value === CORRECT_PASSWORD) {
+                    // Correct password
+                    setAuth();
+                    submitBtn.textContent = 'Access Granted ✓';
+                    submitBtn.style.background = '#28a745';
+                    
+                    setTimeout(() => {
+                        redirectToSite();
+                    }, 500);
+                } else {
+                    // Incorrect password
+                    spinner.classList.remove('show');
+                    errorMsg.classList.add('show');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Access Site';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                    
+                    // Shake animation
+                    passwordInput.style.animation = 'shake 0.5s';
+                    setTimeout(() => {
+                        passwordInput.style.animation = '';
+                    }, 500);
+                }
+            }, 800);
+        });
+
+        // Shake animation for password field
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Check authentication on page load
+        checkAuth();
+
+        // Focus password field on load
+        document.getElementById('password').focus();
+    </script>
+</body>
+</html>
