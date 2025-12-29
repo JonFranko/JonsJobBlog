@@ -1,293 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jon's Job Blog - Access Required</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Courier New', monospace;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .login-container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-        }
-
-        h1 {
-            color: #1e3c72;
-            margin-bottom: 10px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 14px;
-            font-style: italic;
-        }
-
-        .notice {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 25px;
-            text-align: left;
-            font-size: 13px;
-            color: #856404;
-        }
-
-        .notice strong {
-            display: block;
-            margin-bottom: 8px;
-            color: #856404;
-        }
-
-        label {
-            display: block;
-            text-align: left;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        input[type="password"] {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            font-family: 'Courier New', monospace;
-            margin-bottom: 20px;
-            transition: border-color 0.3s;
-        }
-
-        input[type="password"]:focus {
-            outline: none;
-            border-color: #1e3c72;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #1e3c72;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-            font-family: 'Courier New', monospace;
-        }
-
-        button:hover {
-            background: #2a5298;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
-
-        .error {
-            color: #dc3545;
-            margin-top: 15px;
-            font-size: 14px;
-            display: none;
-        }
-
-        .error.show {
-            display: block;
-        }
-
-        .footer {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .spinner {
-            display: none;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #1e3c72;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .spinner.show {
-            display: block;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Legal Disclaimer — Jon's Job Blog</title>
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <style>
+    :root { 
+      --bg1:#f2f2f2; 
+      --bg2:#e6eef7; 
+      --ink:#222; 
+      --accent:#1a5fb4; 
+      --accent-dark:#0e3c74; 
+      --warning:#d97706;
+      --panel:#ffffff; 
+      --shadow:rgba(0,0,0,0.15); 
+    }
+    
+    html, body { height: 100%; margin: 0; }
+    
+    body {
+      font-family: "Trebuchet MS", Verdana, Tahoma, Arial, sans-serif; 
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px) 0 0 / 12px 12px,
+        linear-gradient(0deg, rgba(255,255,255,0.35) 1px, transparent 1px) 0 0 / 12px 12px,
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+    
+    .wrap { 
+      max-width: 720px; 
+      margin: 40px auto 80px; 
+      padding: 0 16px; 
+    }
+    
+    .panel { 
+      background: var(--panel); 
+      border: 1px solid #d9d9d9; 
+      border-radius: 10px; 
+      box-shadow: 0 8px 20px var(--shadow); 
+      overflow: hidden; 
+    }
+    
+    .header-bar {
+      background: linear-gradient(135deg, var(--warning) 0%, #b45309 100%);
+      padding: 20px 24px;
+      border-bottom: 3px solid #92400e;
+    }
+    
+    .header-bar h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .content { 
+      padding: 32px 28px; 
+      line-height: 1.7;
+    }
+    
+    .content h2 {
+      font-size: 20px;
+      color: var(--accent-dark);
+      margin: 24px 0 12px 0;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+    
+    .content h2:first-of-type {
+      margin-top: 0;
+    }
+    
+    .warning-box {
+      background: #fef3c7;
+      border-left: 4px solid var(--warning);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .warning-box strong {
+      color: #92400e;
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    .info-box {
+      background: #dbeafe;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 8px 8px 8px 0;
+      border-radius: 6px;
+      border: 1px solid #8db2de;
+      background: linear-gradient(180deg, #ffffff, #d9e9ff);
+      box-shadow: 0 2px 0 #bcd2f0, inset 0 1px 0 #fff;
+      text-decoration: none;
+      color: var(--accent-dark);
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .btn:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      border-color: var(--accent-dark);
+    }
+    
+    .checkbox-group {
+      margin: 24px 0;
+    }
+    
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      margin: 12px 0;
+      padding: 12px;
+      background: #f9fafb;
+      border-radius: 6px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+      margin-right: 12px;
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    
+    .checkbox-item label {
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .button-group {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 2px solid #e5e7eb;
+      text-align: center;
+    }
+    
+    ul {
+      margin: 12px 0;
+      padding-left: 24px;
+    }
+    
+    li {
+      margin: 8px 0;
+    }
+    
+    .footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #6b7280;
+      font-size: 13px;
+    }
+    
+    @media (max-width: 640px) {
+      .wrap { margin: 20px auto 40px; }
+      .content { padding: 24px 20px; }
+      .header-bar h1 { font-size: 24px; }
+      .btn { display: block; margin: 8px 0; }
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Jon's Job Blog</h1>
-        <p class="subtitle">Corporate Reality Through Personal Narrative</p>
+  <div class="wrap">
+    <div class="panel">
+      <div class="header-bar">
+        <h1>⚖️ Important Legal Disclaimer</h1>
+      </div>
+      
+      <div class="content">
+        <div class="warning-box">
+          <strong>Work in Progress</strong>
+          This website contains essays documenting workplace experiences and observations about corporate culture. The content is actively being developed and refined.
+        </div>
         
-        <div class="notice">
-            <strong>⚠️ Temporary Access Restriction</strong>
-            This site is temporarily password-protected while content is under legal review. If you need access, please contact the site administrator.
+        <h2>Active Legal Matter</h2>
+        <p>The author has filed a discrimination complaint (Case No. EO-2025-044) with the Pittsburgh Commission on Human Relations, which remains under investigation. This blog documents experiences and perspectives related to that complaint and broader workplace patterns.</p>
+        
+        <div class="info-box">
+          <strong>PPG's Position:</strong> PPG Industries maintains that decision-makers were unaware of the author's disability disclosure at the time of termination, a claim the author disputes but which remains under investigation by the Commission.
         </div>
-
-        <form id="loginForm">
-            <label for="password">Enter Access Password:</label>
-            <input 
-                type="password" 
-                id="password" 
-                name="password" 
-                placeholder="Enter password..."
-                autocomplete="off"
-                required
-            >
-            <button type="submit">Access Site</button>
-            <div class="spinner" id="spinner"></div>
-            <p class="error" id="error">Incorrect password. Please try again.</p>
-        </form>
-
+        
+        <h2>Nature of Content</h2>
+        <p>The essays on this site represent:</p>
+        <ul>
+          <li><strong>Personal Opinion & Analysis:</strong> These are the author's interpretations of events, informed by personal experience and organizational research</li>
+          <li><strong>Systemic Critique:</strong> The focus is on corporate patterns, policies, and culture—not personal attacks on individuals</li>
+          <li><strong>Research-Informed:</strong> Claims about organizational behavior are supported by academic research and publicly available information where possible</li>
+          <li><strong>Living Document:</strong> Content may be updated as circumstances evolve or new information becomes available</li>
+        </ul>
+        
+        <h2>What This Site Does NOT Contain</h2>
+        <ul>
+          <li>Confidential proprietary information</li>
+          <li>Trade secrets or protected business information</li>
+          <li>Private communications reproduced verbatim</li>
+          <li>Unsubstantiated allegations</li>
+          <li>Content designed to harm individuals</li>
+        </ul>
+        
+        <h2>Redactions & Legal Considerations</h2>
+        <p>Certain information has been redacted or anonymized to:</p>
+        <ul>
+          <li>Protect individual privacy</li>
+          <li>Avoid disclosing confidential information</li>
+          <li>Reduce legal risk during active proceedings</li>
+          <li>Focus on systemic issues rather than personal grievances</li>
+        </ul>
+        
+        <div class="warning-box">
+          <strong>Acknowledgment Required</strong>
+          Before proceeding, please confirm you understand:
+        </div>
+        
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="check1">
+            <label for="check1">This content represents personal opinion and analysis during active legal proceedings</label>
+          </div>
+          
+          <div class="checkbox-item">
+            <input type="checkbox" id="check2">
+            <label for="check2">I understand that opposing perspectives exist and this represents one person's documented experience</label>
+          </div>
+          
+          <div class="checkbox-item">
+            <input type="checkbox" id="check3">
+            <label for="check3">The essays focus on organizational patterns and culture, not personal attacks</label>
+          </div>
+        </div>
+        
+        <div class="button-group">
+          <button class="btn btn-primary" id="continueBtn" disabled>Continue to Jon's Job Blog →</button>
+          <a href="https://doubletreeindustries.com" class="btn">Return to Double Tree Industries</a>
+        </div>
+        
         <div class="footer">
-            <p>Password-protected as of December 20, 2025</p>
-            <p>For authorized access only</p>
+          <p>© <span id="year"></span> Double Tree Industries, LLC | <a href="mailto:Jon@doubletreeindustries.com" style="color: var(--accent-dark);">Jon@doubletreeindustries.com</a></p>
         </div>
+      </div>
     </div>
-
-    <script>
-        // Password configuration
-        const CORRECT_PASSWORD = 'temporary-access-2024';
-        const STORAGE_KEY = 'jjb_auth';
-        const EXPIRY_HOURS = 24; // Session expires after 24 hours
-
-        // Check if already authenticated
-        function checkAuth() {
-            const auth = localStorage.getItem(STORAGE_KEY);
-            if (auth) {
-                try {
-                    const authData = JSON.parse(auth);
-                    const now = new Date().getTime();
-                    
-                    // Check if session is still valid
-                    if (authData.expiry > now && authData.authenticated === true) {
-                        redirectToSite();
-                        return true;
-                    } else {
-                        // Session expired, clear it
-                        localStorage.removeItem(STORAGE_KEY);
-                    }
-                } catch (e) {
-                    localStorage.removeItem(STORAGE_KEY);
-                }
-            }
-            return false;
-        }
-
-        // Set authentication
-        function setAuth() {
-            const now = new Date().getTime();
-            const expiry = now + (EXPIRY_HOURS * 60 * 60 * 1000);
-            const authData = {
-                authenticated: true,
-                expiry: expiry,
-                timestamp: now
-            };
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(authData));
-        }
-
-        // Redirect to main site
-        function redirectToSite() {
-            window.location.href = 'main.html';
-        }
-
-        // Handle form submission
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const passwordInput = document.getElementById('password');
-            const errorMsg = document.getElementById('error');
-            const spinner = document.getElementById('spinner');
-            const submitBtn = this.querySelector('button');
-            
-            // Hide error message
-            errorMsg.classList.remove('show');
-            
-            // Show loading state
-            spinner.classList.add('show');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Checking...';
-            
-            // Simulate slight delay (makes it feel more secure)
-            setTimeout(() => {
-                if (passwordInput.value === CORRECT_PASSWORD) {
-                    // Correct password
-                    setAuth();
-                    submitBtn.textContent = 'Access Granted ✓';
-                    submitBtn.style.background = '#28a745';
-                    
-                    setTimeout(() => {
-                        redirectToSite();
-                    }, 500);
-                } else {
-                    // Incorrect password
-                    spinner.classList.remove('show');
-                    errorMsg.classList.add('show');
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Access Site';
-                    passwordInput.value = '';
-                    passwordInput.focus();
-                    
-                    // Shake animation
-                    passwordInput.style.animation = 'shake 0.5s';
-                    setTimeout(() => {
-                        passwordInput.style.animation = '';
-                    }, 500);
-                }
-            }, 800);
-        });
-
-        // Shake animation for password field
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes shake {
-                0%, 100% { transform: translateX(0); }
-                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-                20%, 40%, 60%, 80% { transform: translateX(5px); }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Check authentication on page load
-        checkAuth();
-
-        // Focus password field on load
-        document.getElementById('password').focus();
-    </script>
+  </div>
+  
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    const check1 = document.getElementById('check1');
+    const check2 = document.getElementById('check2');
+    const check3 = document.getElementById('check3');
+    const continueBtn = document.getElementById('continueBtn');
+    
+    function updateButton() {
+      if (check1.checked && check2.checked && check3.checked) {
+        continueBtn.disabled = false;
+        continueBtn.style.opacity = '1';
+        continueBtn.style.cursor = 'pointer';
+      } else {
+        continueBtn.disabled = true;
+        continueBtn.style.opacity = '0.5';
+        continueBtn.style.cursor = 'not-allowed';
+      }
+    }
+    
+    check1.addEventListener('change', updateButton);
+    check2.addEventListener('change', updateButton);
+    check3.addEventListener('change', updateButton);
+    
+    continueBtn.addEventListener('click', function() {
+      if (!this.disabled) {
+        // Set a session flag so they don't see this again during this session
+        sessionStorage.setItem('disclaimerAcknowledged', 'true');
+        window.location.href = 'index.html';
+      }
+    });
+    
+    // Check if they've already acknowledged this session
+    if (sessionStorage.getItem('disclaimerAcknowledged') === 'true') {
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
