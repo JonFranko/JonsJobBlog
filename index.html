@@ -292,13 +292,13 @@
       if (!this.disabled) {
         // Set a session flag so they don't see this again during this session
         sessionStorage.setItem('disclaimerAcknowledged', 'true');
-        window.location.href = 'index.html';
+        window.location.href = 'main.html';
       }
     });
     
     // Check if they've already acknowledged this session
     if (sessionStorage.getItem('disclaimerAcknowledged') === 'true') {
-      window.location.href = 'index.html';
+      window.location.href = 'main.html';
     }
   </script>
 </body>
