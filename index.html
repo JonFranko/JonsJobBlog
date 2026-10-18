@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Legal Disclaimer — Jon's Job Blog</title>
-  <meta name="robots" content="noindex, nofollow" />
+  <title>About These Essays | Jon's Job Blog</title>
+  <meta name="robots" content="noindex, nofollow, noai, noimageai" />
   
   <style>
     :root { 
@@ -187,119 +187,30 @@
   <div class="wrap">
     <div class="panel">
       <div class="header-bar">
-        <h1>⚖️ Important Legal Disclaimer</h1>
+        <h1>About these essays</h1>
       </div>
-      
+
       <div class="content">
-        <div class="warning-box">
-          <strong>Work in Progress</strong>
-          This website contains essays documenting workplace experiences and observations about corporate culture. The content is actively being developed and refined.
-        </div>
-        
-        <h2>Active Legal Matter</h2>
-        <p>The author has filed a discrimination complaint (Case No. EO-2025-044) with the Pittsburgh Commission on Human Relations, which remains under investigation. This blog documents experiences and perspectives related to that complaint and broader workplace patterns.</p>
-        
-        <div class="info-box">
-          <strong>PPG's Position:</strong> PPG Industries maintains that decision-makers were unaware of the author's disability disclosure at the time of termination, a claim the author disputes but which remains under investigation by the Commission.
-        </div>
-        
-        <h2>Nature of Content</h2>
-        <p>The essays on this site represent:</p>
-        <ul>
-          <li><strong>Personal Opinion & Analysis:</strong> These are the author's interpretations of events, informed by personal experience and organizational research</li>
-          <li><strong>Systemic Critique:</strong> The focus is on corporate patterns, policies, and culture—not personal attacks on individuals</li>
-          <li><strong>Research-Informed:</strong> Claims about organizational behavior are supported by academic research and publicly available information where possible</li>
-          <li><strong>Living Document:</strong> Content may be updated as circumstances evolve or new information becomes available</li>
-        </ul>
-        
-        <h2>What This Site Does NOT Contain</h2>
-        <ul>
-          <li>Confidential proprietary information</li>
-          <li>Trade secrets or protected business information</li>
-          <li>Private communications reproduced verbatim</li>
-          <li>Unsubstantiated allegations</li>
-          <li>Content designed to harm individuals</li>
-        </ul>
-        
-        <h2>Redactions & Legal Considerations</h2>
-        <p>Certain information has been redacted or anonymized to:</p>
-        <ul>
-          <li>Protect individual privacy</li>
-          <li>Avoid disclosing confidential information</li>
-          <li>Reduce legal risk during active proceedings</li>
-          <li>Focus on systemic issues rather than personal grievances</li>
-        </ul>
-        
-        <div class="warning-box">
-          <strong>Acknowledgment Required</strong>
-          Before proceeding, please confirm you understand:
-        </div>
-        
-        <div class="checkbox-group">
-          <div class="checkbox-item">
-            <input type="checkbox" id="check1">
-            <label for="check1">This content represents personal opinion and analysis during active legal proceedings</label>
-          </div>
-          
-          <div class="checkbox-item">
-            <input type="checkbox" id="check2">
-            <label for="check2">I understand that opposing perspectives exist and this represents one person's documented experience</label>
-          </div>
-          
-          <div class="checkbox-item">
-            <input type="checkbox" id="check3">
-            <label for="check3">The essays focus on organizational patterns and culture, not personal attacks</label>
-          </div>
-        </div>
-        
+        <p>Jon's Job Blog is a personal reflection on several years of corporate work, written during a career transition. It reflects my own experiences and opinions, not established fact about any company or person.</p>
+
+        <p>I wrote it from my own notes and used Claude, an AI assistant, as an editor for clarity and tone.</p>
+
+        <p>I'm sharing it because the patterns are worth talking about, and because I'd rather tell my own story. These patterns aren't unique to one company, and most people who have worked inside a large organization will recognize some of them. Whether you're going through a transition of your own or just trying to make sense of where you work, I hope something here helps.</p>
+
         <div class="button-group">
-          <button class="btn btn-primary" id="continueBtn" disabled>Continue to Jon's Job Blog →</button>
-          <a href="https://doubletreeindustries.com" class="btn">Return to Double Tree Industries</a>
+          <a href="main.html" class="btn btn-primary">Read the essays</a>
+          <a href="https://doubletreeindustries.com" class="btn">Visit Double Tree Industries</a>
         </div>
-        
+
         <div class="footer">
-          <p>© <span id="year"></span> Double Tree Industries, LLC | <a href="mailto:Jon@doubletreeindustries.com" style="color: var(--accent-dark);">Jon@doubletreeindustries.com</a></p>
+          <p>&copy; <span id="year"></span> Double Tree Industries, LLC | <a href="mailto:Jon@doubletreeindustries.com" style="color: var(--accent-dark);">Jon@doubletreeindustries.com</a></p>
         </div>
       </div>
     </div>
   </div>
-  
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    const check1 = document.getElementById('check1');
-    const check2 = document.getElementById('check2');
-    const check3 = document.getElementById('check3');
-    const continueBtn = document.getElementById('continueBtn');
-    
-    function updateButton() {
-      if (check1.checked && check2.checked && check3.checked) {
-        continueBtn.disabled = false;
-        continueBtn.style.opacity = '1';
-        continueBtn.style.cursor = 'pointer';
-      } else {
-        continueBtn.disabled = true;
-        continueBtn.style.opacity = '0.5';
-        continueBtn.style.cursor = 'not-allowed';
-      }
-    }
-    
-    check1.addEventListener('change', updateButton);
-    check2.addEventListener('change', updateButton);
-    check3.addEventListener('change', updateButton);
-    
-    continueBtn.addEventListener('click', function() {
-      if (!this.disabled) {
-        // Set a session flag so they don't see this again during this session
-        sessionStorage.setItem('disclaimerAcknowledged', 'true');
-        window.location.href = 'main.html';
-      }
-    });
-    
-    // Check if they've already acknowledged this session
-    if (sessionStorage.getItem('disclaimerAcknowledged') === 'true') {
-      window.location.href = 'main.html';
-    }
   </script>
 </body>
 </html>
